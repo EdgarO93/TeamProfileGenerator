@@ -1,6 +1,6 @@
 const Employee = require("../lib/Employee");
 
-describe('Employee', () => {
+describe('Making Employee', () => {
     it('Making new Employee', () => {
         const e = new Employee();
         expect(typeof(e)).toBe("object");
