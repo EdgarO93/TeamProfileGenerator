@@ -7,7 +7,8 @@ const Intern = require("./lib/Intern");
 
 const employees = [];
 let newMember;
-// const generatehtml = require("./utils/generateMarkdown.js");
+const addHtml = require("./src/addHtml.js");
+// const base = require("./src/base.js");
 // function for prompts starting with Manager
 function managerQuestions() {
 
@@ -52,15 +53,19 @@ function managerQuestions() {
 
 
             }]).then(function ({ employeeInfo, addMembers }) {
+                newMember = new Manager(name, id, email, employeeInfo)
+                employees.push(newMember);
+                addHtml(newMember)
                 if (addMembers === "yes") {
                     addingMember();
                 } else {
-                  //in case user doesn't want to add more team members, invokes the function to add the html, and adds to array of employeses
+                    //in case user doesn't want to add more team members, invokes the function to add the html, and adds to array of employeses
                     newMember = new Manager(name, id, email, employeeInfo)
                     employees.push(newMember);
                     addHtml(newMember)
                     console.log('test to end')
                     console.log(employees)
+                    // endofHTML()
 
                 }
             })
@@ -129,9 +134,7 @@ function addingMember() {
                     if (moreMembers === "yes") {
                         addingMember();
                     } else {
-                        // maybe function to create final html
-                        console.log('test to end')
-                        console.log(employees)
+                        console.log("finished!");
                     }
                 });
 
@@ -141,21 +144,49 @@ function addingMember() {
     })
 }
 
-//will add function here to append html
-function addHtml(employee) {
-    console.log(employee)
-}
 
 
-// A function to initialize app
-function init() {
-    managerQuestions();
-
-  //maybe something like belownext
-    //   writeToFile("README.md", generateMarkdown(answers));
-}
 
 
-// Function call to initialize app
-init();
+// function endofHTML(){
+//    const end =` </div>
+//     </div>
+// </body>
 
+// </html>`;
+// fs.appendFile("./dist/index.html", end, function (err) {
+//     if (err) {
+//         console.log(err);
+//     };
+// });
+// console.log("end");
+
+// }
+
+    // A function to initialize app
+    function init() {
+        // writeToFile("index.html",base())
+        managerQuestions();
+    }
+
+
+
+//unlink function to delete the previous README
+// function writeToFile(fileName, data) {
+//     let newFile = `./dist/index.html`
+//     fs.unlink(newFile, (err) => {
+  
+//       if (err) {
+//         console.log("No html to overwrite, will make new one!");
+//       }
+  
+  
+    //   fs.writeFile(fileName, data, (err) =>
+    //     err ? console.log(err) : console.log("Success! You have a new file(index.html) in the dist folder.")
+//     //   );
+//     })
+  
+//   }
+
+    // Function call to initialize app
+    init();
