@@ -1,0 +1,21 @@
+
+    h1.text-center {
+        font-size: 50px;
+        color: #5796b9;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card-header {
+        background-color: #2d2d2d;
+    }
+    .card-title {
+        color: white;
+    }
+    .card-body {
+        background-color: #EAEDF0;
+    }
+    .card.employee-card {
+        margin-top: 5%;
+        margin-right:5%;
+        margin-bottom: 10%;
+    }
