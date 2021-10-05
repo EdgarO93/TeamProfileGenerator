@@ -1,14 +1,15 @@
 // Include packages needed for this application
 const inquirer = require("inquirer");
-const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-
-const employees = [];
-let newMember;
 const addHtml = require("./src/addHtml.js");
 const base = require("./src/base.js");
+
+//variables for employees classes 
+const employees = [];
+let newMember;
+
 
 // function for prompts starting with Manager
 function managerQuestions() {
@@ -32,14 +33,14 @@ function managerQuestions() {
       },
     ])
     .then(function ({ name, id, email }) {
-      let employeeInfo = "office Number";
+      let employeeInfo = "office number";
 
       inquirer
         .prompt([
           {
             type: "input",
             name: "employeeInfo",
-            message: `Enter team manager's ${employeeInfo}`,
+            message: `Enter team manager's ${employeeInfo}:`,
           },
           {
             type: "list",
@@ -131,43 +132,12 @@ function addingMember() {
     });
 }
 
-// function endofHTML(){
-//    const end =` </div>
-//     </div>
-// </body>
-
-// </html>`;
-// fs.appendFile("./dist/index.html", end, function (err) {
-//     if (err) {
-//         console.log(err);
-//     };
-// });
-// console.log("end");
-
-// }
 
 // A function to initialize app
 function init() {
-  // writeToFile("index.html",base())
-
   managerQuestions();
 }
 
-//unlink function to delete the previous README
-// function writeToFile(fileName, data) {
-//     let newFile = `./dist/index.html`
-//     fs.unlink(newFile, (err) => {
-
-//       if (err) {
-//         console.log("No html to overwrite, will make new one!");
-//       }
-
-//   fs.writeFile(fileName, data, (err) =>
-//     err ? console.log(err) : console.log("Success! You have a new file(index.html) in the dist folder.")
-//     //   );
-//     })
-
-//   }
 
 // Function call to initialize app
 init();
