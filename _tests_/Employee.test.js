@@ -1,11 +1,11 @@
 const Employee = require("../lib/Employee");
-
+//creates tests to test employee object
 describe('Making Employee', () => {
     test('Making new Employee', () => {
         const e = new Employee();
         expect(typeof(e)).toBe("object");
     });
-
+ // Uses test object created to check properties are able to get created
     test('Can make name', () => {
         const name = "Edgar";
         const e = new Employee(name);

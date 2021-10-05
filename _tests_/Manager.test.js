@@ -1,6 +1,6 @@
 
 const Manager = require("../lib/Manager");
-
+ // Tests check properties are able to get created from new object 
 test("Setting office number", () => {
   const testValue = 3200;
   const e = new Manager("Andy", 1, "test2@test.com", testValue);

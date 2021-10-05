@@ -1,5 +1,5 @@
 const Engineer = require("../lib/Engineer");
-
+ // Tests check properties are able to get created from new object 
 test("Getting GH account", () => {
   const testValue = "GHuser";
   const e = new Engineer("Testy", 1, "test@test.com", testValue);
