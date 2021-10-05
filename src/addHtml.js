@@ -41,7 +41,7 @@ function addHtml(employee) {
               </li>
               <li class="list-group-item">
                 School:
-               ${school}}</li>
+               ${school}</li>
             </ul>
           </div>`;
         } else {
