@@ -103,7 +103,7 @@ function addingMember() {
           {
             type: "input",
             name: "employeeInfo",
-            message: `Enter team member's ${employeeInfo}`,
+            message: `Enter team member's ${employeeInfo}:`,
           },
           {
             type: "list",
