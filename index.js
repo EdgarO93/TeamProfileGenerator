@@ -60,7 +60,7 @@ function managerQuestions() {
             newMember = new Manager(name, id, email, employeeInfo);
             employees.push(newMember);
             addHtml(newMember);
-            console.log("Team Profile Generator has Finished!");
+            console.log("Team Profile Generator has Finished! See index.html in dist folder!");
           }
         });
     });
@@ -125,7 +125,7 @@ function addingMember() {
             if (moreMembers === "yes") {
               addingMember();
             } else {
-              console.log("Team Profile Generator has Finished!");
+              console.log("Team Profile Generator has Finished! See index.html in dist folder!");
             }
           });
         });
