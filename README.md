@@ -1,4 +1,5 @@
 # Team Profile Generator
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 This Team Profile Generator is powered by Node.js, JavaScript, jQuery and dynamic HTML. By answering some prompts, users will be able to create an HTML file that will create a team profile for each person entered. This project allowed me get more experience working with packages such as Jest and Inquirer. By building on the knowledge learned on the README Generator, I was able to use that experience to execute this project. This project assumes there will only be one manager, so in future updates I would like to expand the manager list and add other roles. I also would like to expand the template styling to have more features such as transitions or animations.
